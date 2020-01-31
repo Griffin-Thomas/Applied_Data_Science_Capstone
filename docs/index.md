@@ -1,4 +1,3 @@
-# Determining the Optimal Breakfast Restaurant Location
 ## Introduction (Business Problem)
 Toronto is home to a large thriving culinary scene, seeing as it is the largest city in Canada with a population of over 6 million. If a restaurateur wanted to establish their very own breakfast restaurant in Toronto, then which neighbourhood would be best suited for its success? In other words, we wish to determine which neighbourhoods in Toronto have the highest unmet demand for breakfast.
 
