@@ -11,4 +11,4 @@ In the future, some demographics data about the neighbourhoods' populations from
 ## Methodology
 ### Exploratory Data Analysis
 
-<iframe src="https://raw.githubusercontent.com/Griffin-Thomas/Applied_Data_Science_Capstone/master/first_map.html" height="650" width="100%"></iframe>
+<iframe src="https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/first_map.html" height="650" width="100%"></iframe>
