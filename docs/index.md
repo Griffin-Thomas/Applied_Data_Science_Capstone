@@ -14,6 +14,7 @@ Toronto is home to a large thriving culinary scene, seeing as it is the largest 
 
 Additionally, the [Traffic Signal Vehicle and Pedestrian Volumes](https://open.toronto.ca/dataset/traffic-signal-vehicle-and-pedestrian-volumes/) dataset will be used to determine the average peak traffic flow through the neighbourhoods. This dataset consists of volume counts collected at intersections where there are traffic signals: 
 <center>
+
 | Column Name                 | Description                                      |
 |-----------------------------|--------------------------------------------------|
 | Main                        | Main street name                                 |
@@ -21,6 +22,7 @@ Additionally, the [Traffic Signal Vehicle and Pedestrian Volumes](https://open.t
 | Longitude                   | Longitude geo-coordinate                         |
 | 8 Peak Hr Vehicle Volume    | Total vehicle volume between 7:30am to 6:00pm    |
 | 8 Peak Hr Pedestrian Volume | Total pedestrian volume between 7:30am to 6:00pm |
+
 </center>
 It will be vital in determining where there is a large amount of traffic in certain neighbourhoods that have unmet demand for breakfast restaurants. Using [Folium](https://python-visualization.github.io/folium/), a map can be built of traffic volume using some sort of regressor like [K-Nearest Neighbours](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html) or [Radius Neighbours](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html). This visualization will be of great help when we cross-reference it to a map of the various neighbourhoods. 
 
@@ -32,12 +34,14 @@ Once the Wikipedia List of Postal Codes of Canada table was retrieved as a dataf
 
 Lastly, latitude and longitude coordinates were added as additional columns using [Geocoding with ArcGIS](https://developers.arcgis.com/features/geocoding/):
 <center>
+
 | Postcode | Borough     | Neighbourhood                          | Latitude  | Longitude  |
 |----------|-------------|----------------------------------------|-----------|------------|
 | M1B      | Scarborough | Rouge, Malvern                         | 43.811525 | -79.195517 |
 | M1C      | Scarborough | Highland Creek, Rouge Hill, Port Union | 43.785665 | -79.158725 |
 | M1E      | Scarborough | Guildwood, Morningside, West Hill      | 43.765815 | -79.175193 |
 | M1G      | Scarborough | Woburn                                 | 43.768369 | -79.217590 |
+
 </center>
 
 With these coordinates, we can visualize these neighbourhoods on a map of Toronto using Folium!
