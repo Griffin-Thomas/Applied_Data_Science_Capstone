@@ -43,3 +43,9 @@ With these coordinates, we can visualize these neighbourhoods on a map of Toront
 
 ### Exploratory Data Analysis
 
+## Results
+
+## Discussion
+
+## Conclusion
+
