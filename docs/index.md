@@ -88,7 +88,7 @@ That is, the following neighbourhoods are all theoretical candidates for carryin
 * Silver Hills, York Mills
 
 ## Discussion
-As expected by looking at the traffic volume heatmap, most of the neighbourhoods revealed by the polynomial regression are in these lower traffic areas.
+As expected by looking at the traffic volume heatmap, most of the neighbourhoods revealed by the polynomial regression are in these higher traffic areas.
 
 It is important to note that some of these suggested neighbourhoods may have zoning bylaws that prohibit the establishment of restaurants. For the restaurateur, this is something to keep in mind and look into.
 
