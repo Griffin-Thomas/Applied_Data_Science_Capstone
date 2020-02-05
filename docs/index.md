@@ -42,6 +42,36 @@ With these coordinates, we can visualize these neighbourhoods on a map of Toront
 <iframe src="https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/first_map.html" height="650" width="100%"></iframe>
 
 ### Exploratory Data Analysis
+Foursquare's API was then queried to collect a list of around 4000 breakfast restaurants within a 2 km radius of each of these neighbourhoods. The list was processed and filtered by omitting large fast-food chains such as Tim Hortons and Starbucks, resulting in a list of around 2900 restaurants. I was more interested in analyzing smaller breakfast restaurants. 
+
+It was interesting to look at the number of breakfast restaurants per neighbourhood:
+| Neighbourhood                                | Total Breakfast Restaurants |
+|----------------------------------------------|-----------------------------|
+| Queen's Park                                 | 60                          |
+| Little Portugal, Trinity                     | 50                          |
+| Cabbagetown, St. James Town                  | 49                          |
+| Rosedale                                     | 48                          |
+| Brockton, Exhibition Place, Parkdale Village | 48                          |
+
+It should be no surprise that Queen's Park has the largest number of breakfast restaurants within a 2 km radius. It is an urban park centralized in Downtown Toronto that also enclaves the University of Toronto.
+
+A heatmap of the distribution of these restaurants was then created. 3 circles were drawn on top of the heatmap, indicating a 1, 2, and 3 km radius from the center of Toronto (Lawrence Park):
+<iframe src="https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/second_map.html" height="650" width="100%"></iframe>
+We can see that there is a higher density of breakfast restaurants south of the center of Toronto. There is a lower density to the west, north, and some of the east however, indicating that there might be an unmet breakfast demand in these areas. Restaurants seem to be saturated in Downtown Toronto and this is likely because of the amount of traffic in this location.
+
+The traffic data was then imported and processed. To determine the overall street traffic volume near a neighbourhood, a Radius Neighbours Regressor was used to build a heatmap of traffic volume based on how busy the nearest roads are:
+<iframe src="https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/third_map.html" height="650" width="100%"></iframe> 
+It is interesting to note that there is a decent amount of traffic taking place east of the center of Toronto. But if we refer back to our map of breakfast restaurants, we see that there is a relatively low density of restaurants east of the center. This indicates that there might be unmet demand in this area!
+
+Predicted traffic volume data using the regressor was then combined with neighbourhood latitudes and longitudes. It is very interesting (and expected) to see that there is some linear association between traffic volume and the number of breakfast restaurants in a given neighbourhood, as seen in the following correlations table:
+
+| Feature | Correlation with Total Breakfast Restaurants |
+|---------|----------------------------------------------|
+| Volume  | 0.201977                                     |
+
+A polynomial regression between traffic volume and the number of breakfast restaurants in the neighbourhoods was then used to help model this relationship:
+
+!(https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/poly_plot.PNG)
 
 ## Results
 
