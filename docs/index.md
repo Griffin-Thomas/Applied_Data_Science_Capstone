@@ -45,6 +45,7 @@ With these coordinates, we can visualize these neighbourhoods on a map of Toront
 Foursquare's API was then queried to collect a list of around 4000 breakfast restaurants within a 2 km radius of each of these neighbourhoods. The list was processed and filtered by omitting large fast-food chains such as Tim Hortons and Starbucks, resulting in a list of around 2900 restaurants. I was more interested in analyzing smaller breakfast restaurants. 
 
 It was interesting to look at the number of breakfast restaurants per neighbourhood:
+
 | Neighbourhood                                | Total Breakfast Restaurants |
 |----------------------------------------------|-----------------------------|
 | Queen's Park                                 | 60                          |
@@ -63,7 +64,7 @@ The traffic data was then imported and processed. To determine the overall stree
 <iframe src="https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/third_map.html" height="650" width="100%"></iframe> 
 It is interesting to note that there is a decent amount of traffic taking place east of the center of Toronto. But if we refer back to our map of breakfast restaurants, we see that there is a relatively low density of restaurants east of the center. This indicates that there might be unmet demand in this area!
 
-Predicted traffic volume data using the regressor was then combined with neighbourhood latitudes and longitudes. It is very interesting (and expected) to see that there is some linear association between traffic volume and the number of breakfast restaurants in a given neighbourhood, as seen in the following correlations table:
+Predicted traffic volume data using the regressor was then combined with neighbourhood latitudes and longitudes. It is very interesting (and expected) to see that there is some linear association between traffic volume and the number of breakfast restaurants in a given neighbourhood:
 
 | Feature | Correlation with Total Breakfast Restaurants |
 |---------|----------------------------------------------|
@@ -71,7 +72,7 @@ Predicted traffic volume data using the regressor was then combined with neighbo
 
 A polynomial regression between traffic volume and the number of breakfast restaurants in the neighbourhoods was then used to help model this relationship:
 
-!(https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/poly_plot.PNG)
+![](https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/poly_plot.PNG)
 
 ## Results
 
