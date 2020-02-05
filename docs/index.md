@@ -44,7 +44,7 @@ With these coordinates, we can visualize these neighbourhoods on a map of Toront
 ### Exploratory Data Analysis
 Foursquare's API was then queried to collect a list of around 4000 breakfast restaurants within a 2 km radius of each of these neighbourhoods. The list was processed and filtered by omitting large fast-food chains such as Tim Hortons and Starbucks, resulting in a list of around 2900 restaurants. I was more interested in analyzing smaller breakfast restaurants. 
 
-It was interesting to look at the number of breakfast restaurants per neighbourhood:
+Here is a look at the number of breakfast restaurants per neighbourhood:
 
 | Neighbourhood                                | Total Breakfast Restaurants |
 |----------------------------------------------|-----------------------------|
@@ -62,9 +62,9 @@ We can see that there is a higher density of breakfast restaurants south of the 
 
 The traffic data was then imported and processed. To determine the overall street traffic volume near a neighbourhood, a Radius Neighbours Regressor was used to build a heatmap of traffic volume based on how busy the nearest roads are:
 <iframe src="https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/third_map.html" height="650" width="100%"></iframe> 
-It is interesting to note that there is a decent amount of traffic taking place east of the center of Toronto. But if we refer back to our map of breakfast restaurants, we see that there is a relatively low density of restaurants east of the center. This indicates that there might be unmet demand in this area!
+Note that there is a decent amount of traffic taking place east of the center of Toronto. But if we refer back to our map of breakfast restaurants, we see that there is a relatively low density of restaurants east of the center. This indicates that there might be unmet demand in this area!
 
-Predicted traffic volume data using the regressor was then combined with neighbourhood latitudes and longitudes. It is very interesting (and expected) to see that there is some linear association between traffic volume and the number of breakfast restaurants in a given neighbourhood:
+Predicted traffic volume data using the regressor was then combined with neighbourhood latitudes and longitudes. It is very intriguing (and expected) to see that there is some linear association between traffic volume and the number of breakfast restaurants in a given neighbourhood:
 
 | Feature | Correlation with Total Breakfast Restaurants |
 |---------|----------------------------------------------|
@@ -75,8 +75,24 @@ A polynomial regression between traffic volume and the number of breakfast resta
 ![](https://griffin-thomas.github.io/Applied_Data_Science_Capstone/figs/poly_plot.PNG)
 
 ## Results
+### Polynomial Regression
+Using the regression, it was able to be determined that there are some neighbourhoods that have an improper relationship between the number of breakfast restaurants they have and the traffic volume they receive. 
+
+That is, the following neighbourhoods are all theoretical candidates for carrying more breakfast restaurants due to the high proportion of traffic volume:
+* Willowdale South
+* Hillcrest Village
+* Maryvale, Wexford
+* Bathurst Manor, Downsview North, Wilson Heights
+* Parkwoods
+* Don Mills North
+* Silver Hills, York Mills
 
 ## Discussion
+As expected by looking at the traffic volume heatmap, most of the neighbourhoods revealed by the polynomial regression are in these lower traffic areas.
+
+It is important to note that some of these suggested neighbourhoods may have zoning bylaws that prohibit the establishment of restaurants. For the restaurateur, this is something to keep in mind and look into.
+
+For further improved analysis, residential demographics data should be looked at to find any potential factors that influence the number of breakfast restaurants in a neighbourhood. This is on the to-do list. 
 
 ## Conclusion
-
+The analysis was able to reveal some useful information. Any of the above listed neighbourhoods should be looked at to determine their viability. It should hopefully aid any prospective restaurateur looking to open their own breakfast restaurant! 
