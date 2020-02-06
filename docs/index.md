@@ -92,7 +92,7 @@ As expected by looking at the traffic volume heatmap, most of the neighbourhoods
 
 It is important to note that some of these suggested neighbourhoods may have zoning bylaws that prohibit the establishment of restaurants. For the restaurateur, this is something to keep in mind and look into.
 
-For further improved analysis, residential demographics data should be looked at to find any potential factors that influence the number of breakfast restaurants in a neighbourhood. This is on the to-do list. 
+For further improved analysis, residential demographics data should be looked at to find any potential factors such as income that may influence the number of breakfast restaurants in a neighbourhood. This is on the to-do list. 
 
 ## Conclusion
 The analysis was able to reveal some useful information. Any of the above listed neighbourhoods should be looked at to determine their viability. It should hopefully aid any prospective restaurateur looking to open their own breakfast restaurant! 
